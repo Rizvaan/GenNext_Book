@@ -1,0 +1,106 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+
+# Python specific (for rag-backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+.ENV
+.venv.bak/
+venv.bak/
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
+*.db
+*.db-journal
+instance/
+*.sqlite
+*.sqlite3
+*.log
+
+# Testing
+coverage/
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Environment
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+.TemporaryItems
+.Trashes
+ehthumbs.db
+Icon?
+apidoc/
+docs/api/
+
+# Python specific
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# JavaScript/Node specific
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+dist/
+build/
+.nyc_output
+coverage/
+*.lcov
+.next
+.nuxt
+vercel.json
+.now/
+
+# Docusaurus
+.docusaurus
+.cache-loader
+.netlify
+.svelte-kit
+
+# FastAPI/Python backend
+*.db
+*.db-journal
+instance/
+.webpack/
+*.tmp
+
+# Qdrant
+qdrant_data/
+
+# Build outputs
+*.min.js
+*.min.css
+
+# IDE specific
+.vs/
+*.userprefs
+*.sln.docstates
+*.userosscache
+.user

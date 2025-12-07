@@ -2,46 +2,91 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+import { QABot, PersonalizationButton, ProgressTracker, Exercises, TranslationToggle, Curriculum } from '../src/components';
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# Introduction to Physical AI & Humanoid Robotics
 
-## Getting Started
+<div className="chapter-metadata">
+  <h3>Chapter Overview</h3>
+  <p><strong>Learning Objectives:</strong></p>
+  <ul>
+    <li>Understand the fundamentals of Physical AI</li>
+    <li>Explore the concept of humanoid robotics</li>
+    <li>Grasp the relationship between AI and robotics</li>
+  </ul>
+  <p><strong>Difficulty Level:</strong> Beginner</p>
+</div>
 
-Get started by **creating a new site**.
+<div className="learning-objectives">
+  <h3>Learning Objectives</h3>
+  <p>By the end of this chapter, you will be able to:</p>
+  <ul>
+    <li>Define Physical AI and its significance in robotics</li>
+    <li>Identify key components of humanoid robots</li>
+    <li>Understand basic principles of robot control systems</li>
+  </ul>
+</div>
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Welcome to the exciting world of Physical AI and Humanoid Robotics! This textbook is designed to take you on a journey from fundamental concepts to advanced implementations in the field of robotics.
 
-### What you'll need
+Physical AI represents a paradigm shift in artificial intelligence, moving beyond purely digital systems to integrate AI with physical systems. This integration is particularly powerful in the domain of robotics, where AI algorithms control physical agents interacting with the real world.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## What is Physical AI?
 
-## Generate a new site
+Physical AI refers to artificial intelligence systems that interact with and operate in the physical world. This is distinct from traditional AI that operates primarily in digital spaces. Physical AI systems must account for:
 
-Generate a new Docusaurus site using the **classic template**.
+- Real-world physics and dynamics
+- Sensor and actuator limitations
+- Environmental uncertainties
+- Safety considerations for human interaction
 
-The classic template will automatically be added to your project after you run the command:
+## The Rise of Humanoid Robotics
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+Humanoid robots, designed with human-like characteristics, represent one of the most ambitious goals in robotics. These robots aim to:
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- Navigate human environments effectively
+- Interact naturally with humans
+- Perform tasks designed for human operators
+- Leverage human-compatible interfaces and tools
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+<div className="exercise-block">
+  <div className="exercise-title">Exercise 1.1: Research Activity</div>
+  <p>Research and list three examples of current humanoid robots. For each, identify:</p>
+  <ol>
+    <li>Manufacturer and model</li>
+    <li>Primary application or purpose</li>
+    <li>Key distinguishing features</li>
+  </ol>
+</div>
 
-## Start your site
+<div className="component-container">
+  <h3>AI Assistant</h3>
+  <p>Use the AI assistant below to ask questions about this chapter:</p>
+  <QABot />
+</div>
 
-Run the development server:
+<div className="component-container">
+  <h3>Personalization</h3>
+  <p>Adjust the content difficulty using the personalization button:</p>
+  <PersonalizationButton />
+</div>
 
-```bash
-cd my-website
-npm run start
-```
+<div className="component-container">
+  <h3>Progress Tracker</h3>
+  <p>Track your progress through this chapter:</p>
+  <ProgressTracker moduleId={1} chapterId={1} userId={1} />
+</div>
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+<div className="component-container">
+  <h3>Translation</h3>
+  <p>Switch between English and Urdu:</p>
+  <TranslationToggle />
+</div>
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+<div className="component-container">
+  <h3>Interactive Exercises</h3>
+  <p>Test your knowledge:</p>
+  <Exercises />
+</div>
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+In the next module, we'll dive deeper into the Robot Operating System (ROS 2), which serves as the foundation for most modern robotics development.

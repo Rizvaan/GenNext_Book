@@ -46,11 +46,11 @@ description: "Task list template for feature implementation"
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-**Purpose**: Project initialization and basic structure
+**Purpose**: Project initialization and basic structure following AI-Native Textbook Constitution
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Create project structure per implementation plan ensuring AI-Native content architecture
+- [ ] T002 Initialize project with Docusaurus.ai, Spec-Kit Plus, and RAG backend dependencies
+- [ ] T003 [P] Configure accessibility tools for WCAG 2.1 AA compliance
 
 ---
 
@@ -62,12 +62,16 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Setup database schema and migrations framework for RAG backend (Postgres + Qdrant)
+- [ ] T005 [P] Implement authentication/authorization framework with Better-Auth
+- [ ] T006 [P] Setup API routing and middleware structure for Docusaurus integration
+- [ ] T007 Create base content models with AI-Native architecture attributes
+- [ ] T008 Configure error handling and logging infrastructure for accessibility compliance
+- [ ] T009 Setup environment configuration management for personalization engine
+- [ ] T010 Configure automated quality assurance (validation, testing, RAG-index rebuild, accessibility)
+- [ ] T011 Setup Spec-Kit Plus integration for spec-driven content creation
+- [ ] T012 Implement chunking mechanism for RAG-ready knowledge architecture (300-500 tokens)
+- [ ] T013 Create Urdu translation infrastructure with JSON layer
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 

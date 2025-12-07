@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Personalized Learning',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Content adapts to your background and learning preferences, providing
+        beginner, intermediate, and advanced versions of each concept.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'AI-Powered Assistance',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Ask questions about the textbook content and get AI-generated answers
+        based on the material, with proper references to chapters and modules.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Multi-Language Support',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Access content in multiple languages, including English and Urdu,
+        with technical terminology preserved across translations.
       </>
     ),
   },

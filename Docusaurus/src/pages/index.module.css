@@ -4,20 +4,266 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #2c3e50, #34495e, #2c3e50);
+  color: #333;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Book Cover Styles */
+.bookCover {
+  display: flex;
+  perspective: 1000px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.bookSpine {
+  width: 20px;
+  background: linear-gradient(to right, #1a2530, #2c3e50, #1a2530);
+  border: 1px solid #0d1520;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.bookPage {
+  flex: 1;
+  background: #f9f4dc;
+  padding: 2.5rem;
+  border: 1px solid #e0d0a5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+  transform: rotateY(-3deg);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bookPage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+}
+
+.bookBackCover {
+  width: 30px;
+  background: linear-gradient(to right, #1a2530, #2c3e50, #1a2530);
+  border: 1px solid #0d1520;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.5);
+}
+
+.bookTitle {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.bookTitle .hero__title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.bookTitle .hero__subtitle {
+  color: #34495e;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.bookContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex: 1;
+}
+
+.bookImage {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8dfd0;
+  border-radius: 50%;
+  border: 8px solid #d4c8a9;
+  position: relative;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+}
+
+.robotIcon {
+  width: 150px;
+  height: 150px;
+  background:
+    linear-gradient(45deg, #3498db, #2980b9),
+    radial-gradient(circle at 30% 30%, #ecf0f1, #bdc3c7);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  position: relative;
+}
+
+.robotIcon::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #2c3e50;
+  border-radius: 50%;
+  top: 40px;
+  left: 40px;
+  box-shadow: 70px 0 0 #2c3e50;
+}
+
+.robotIcon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  background: #2c3e50;
+  top: 90px;
+  left: 50px;
+  transform: rotate(-10deg);
+}
+
+.bookDescription {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.bookButtons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 1rem 0;
+  }
+
+  .bookCover {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bookSpine, .bookBackCover {
+    width: 100%;
+    height: 20px;
+  }
+
+  .bookPage {
+    width: 100%;
+    transform: none;
+    min-height: auto;
+  }
+
+  .bookContent {
+    flex-direction: column;
+  }
+
+  .bookImage {
+    width: 180px;
+    height: 180px;
+  }
+
+  .robotIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bookTitle .hero__title {
+    font-size: 2rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Additional Info Section */
+.additionalInfo {
+  padding: 4rem 0;
+  background-color: #f0f7ff;
+}
+
+.infoCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.infoCard h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 0;
+  background-color: #e8f4f8;
+}
+
+.testimonials h2 {
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.testimonialCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  height: 100%;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3498db;
+}
+
+.testimonialCard p:first-of-type {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: right;
+}
+
+/* Footer section styling */
+main {
+  background-color: #f5f7fa;
+}
+
+/* Buttons */
+.buttons a {
+  margin: 0.5rem;
 }

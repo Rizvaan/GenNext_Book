@@ -1,10 +1,9 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global custom CSS for AI-Native Textbook
+ * Book-like styling, responsiveness, and centered layout
  */
 
-/* You can override the default Infima variables here. */
+/* Infima overrides */
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -15,9 +14,20 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Book-like styling */
+  --book-bg-color: #faf9f7;
+  --book-text-color: #333;
+  --book-font-family: 'Georgia', 'Times New Roman', serif;
+  --book-line-height: 1.6;
+  --book-max-width: 1200px;
+  --book-padding: 2rem;
+  --book-chapter-bg: #fff9e6;
+  --book-section-bg: #f8f9fa;
+  --book-border-color: #ddd;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode overrides */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -27,4 +37,262 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --book-bg-color: #1a1a1a;
+  --book-text-color: #e0e0e0;
+  --book-border-color: #444;
+  --book-chapter-bg: #2d2d1d;
+  --book-section-bg: #252525;
 }
+
+/* Body & typography */
+body {
+  font-family: var(--book-font-family);
+  line-height: var(--book-line-height);
+  color: var(--book-text-color);
+  background-color: var(--book-bg-color);
+}
+
+/* Navbar customization for book theme */
+.navbar {
+  background-color: #f9f4dc; /* Similar to book page color */
+  border-bottom: 1px solid #e0d0a5;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar__title {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.navbar__link {
+  color: #34495e;
+}
+
+/* Center text in markdown content only */
+.main-wrapper {
+  max-width: var(--book-max-width);
+  width: 90%;
+  margin: 2rem auto;
+  padding: var(--book-padding);
+  background-color: var(--book-chapter-bg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* soft drop shadow */
+  border-radius: 12px;
+}
+
+/* Markdown content */
+.markdown {
+  font-size: 1.1em;
+  width: 100%;
+}
+
+/* Headers */
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  text-align: center; /* center-align headings in content pages */
+}
+
+.markdown h1 {
+  border-bottom: 2px solid var(--book-border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.markdown h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--book-border-color);
+}
+
+.markdown h3 {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Paragraphs in markdown content */
+.markdown p {
+  margin-bottom: 1.2em;
+  text-align: center; /* center-align paragraphs in content pages */
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--book-section-bg);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Code blocks */
+.markdown pre {
+  border-radius: 8px;
+  padding: 1.2rem;
+  overflow-x: auto;
+  width: 100%;
+  text-align: left; /* keep code left-aligned */
+}
+
+.markdown code {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Tables */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 1px solid var(--book-border-color);
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.markdown table th {
+  background-color: var(--book-section-bg);
+  font-weight: bold;
+}
+
+/* Sidebar, navbar, footer */
+.sidebar {
+  background-color: var(--book-section-bg);
+  border-right: 1px solid var(--book-border-color);
+}
+
+.navbar {
+  background-color: var(--book-chapter-bg);
+  border-bottom: 1px solid var(--book-border-color);
+}
+
+.footer {
+  background-color: var(--book-section-bg);
+  border-top: 1px solid var(--book-border-color);
+  padding: 2rem 0;
+}
+
+/* Chapter & learning objects */
+.chapter-metadata,
+.learning-objectives,
+.exercise-block,
+.component-container {
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.chapter-metadata {
+  background-color: var(--book-section-bg);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 4px 4px 0;
+}
+
+.learning-objectives {
+  background-color: var(--book-chapter-bg);
+  border: 1px dashed var(--book-border-color);
+}
+
+.learning-objectives h3 {
+  margin-top: 0;
+  color: #5a5a5a;
+}
+
+.exercise-block {
+  border: 1px solid var(--book-border-color);
+  background-color: var(--book-section-bg);
+}
+
+.exercise-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.component-container {
+  border: 1px solid var(--book-border-color);
+  overflow: hidden;
+}
+
+/* Focus indicators */
+button:focus,
+input:focus,
+a:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --ifm-color-primary: #205d3b;
+    --book-border-color: #000;
+    --book-text-color: #000;
+    --book-bg-color: #fff;
+  }
+
+  [data-theme='dark'] {
+    --ifm-color-primary: #25c2a0;
+    --book-border-color: #fff;
+    --book-text-color: #fff;
+    --book-bg-color: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --book-padding: 1rem;
+    --book-max-width: 100%;
+  }
+
+  .markdown h1 { font-size: 1.8em; }
+  .markdown h2 { font-size: 1.5em; }
+  .markdown h3 { font-size: 1.3em; }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--book-border-color);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1600px) {
+  .main-wrapper {
+    max-width: 1400px;
+    padding: 3rem 4rem;
+  }
+}
+
